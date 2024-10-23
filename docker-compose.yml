@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  # MongoDB Service
+  mongo:
+    image: mongo
+    container_name: mongo-db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db
+
+  # MySQL Service
+  mysql:
+    image: mysql:latest
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqlpassword
+      MYSQL_DATABASE: distributed_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3307:3306"
+      
+    volumes:
+      - ./mysql-data:/var/lib/mysql

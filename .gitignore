@@ -1,0 +1,9 @@
+# Ignore MongoDB and MySQL data files
+mongo-data/
+mysql-data/
+
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore environment file if it contains sensitive data
+.env

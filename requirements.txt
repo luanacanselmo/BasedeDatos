@@ -1,0 +1,4 @@
+Flask==2.0.3
+pymongo==3.11.4
+mysql-connector-python==8.0.25
+python-dotenv==0.19.2
